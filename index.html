@@ -510,6 +510,19 @@ function renderNotice(){
   $('#notice').innerHTML='<b>方案调整说明（2026-09-21 会议纪要）：</b>仅保留当日往返唯一排期，实际排 7 天；D6 收工 18:20（超 18:00 约 20 分钟，已确认接受）；每日 7:30 出发；<b>12:00–14:00 仅可安排用餐或行车中转，不得巡点/开会</b>（医院午休）；停留时长按人数两档（十多人 → 45 分钟；三十、四十人以上 → 70 分钟）；巡点收工以 18:00 为界（≤18:00 不计超时，回城不计）；每家医院名称后括号标注对应实习生人数；所有点位数写"巡 X 个点"全称。车程已按高德驾车实测校准并优化每日访问顺序，D1–D5/D7 收工 17:10–17:59（均 ≤18:00），D6 收工 18:20（超 18:00 约 20 分钟，已确认接受）。';
 }
 
+function findContact(nm){
+  for(var i=0;i<POINTS.length;i++){
+    var r=POINTS[i];
+    if(r[0]===nm||r[0].indexOf(nm)>=0||nm.indexOf(r[0])>=0){
+      var c=r[6];var ph=r[8]||r[5];
+      var nm2=r[5].split(' ')[0]||'';
+      if(c&&c!=='-'){return c+(ph?(' '+ph):'');}
+      if(nm2)return nm2+(ph?(' '+ph):'');
+      return ph||'-';
+    }
+  }
+  return '-';
+}
 function summaryRows(){
   var days=PLANS['V9'].days;
   return days.map(function(day,di){
@@ -518,22 +531,26 @@ function summaryRows(){
       var m=r[1].match(/^(.+?)（(\d+)人）$/);
       return m?m[1]+'('+m[2]+'人)':r[1];
     });
+    var contacts=pts.map(function(r){
+      var m=r[1].match(/^(.+?)（(\d+)人）$/);
+      return findContact(m?m[1]:r[1]);
+    });
     var total=pts.reduce(function(s,r){var m=r[1].match(/（(\d+)人）$/);return s+(m?parseInt(m[1],10):0);},0);
     var dm=day.head.match(/第(\d+)天/);
-    var dr=day.drive.match(/约(\d+)分钟/);
     var endRow=day.rows.filter(function(r){return r[3]==='end';})[0];
     var endTxt='';
     if(endRow){var m2=endRow[2].match(/巡点(\d{2}:\d{2})收工/);endTxt=m2?m2[1]:endRow[0];}
-    return {day:'第'+(dm?dm[1]:(di+1))+'天',cover:day.cover,pts:names.join('、'),total:total,drive:'约'+(dr?dr[1]:'')+'分钟',end:endTxt};
+    return {day:'第'+(dm?dm[1]:(di+1))+'天',cover:day.cover,pts:names.join('、'),contacts:contacts,total:total,end:endTxt};
   });
 }
 function sumTableHtml(print){
   var rows=summaryRows();
   var cls=print?'pa-sum':'sum-tbl';
   var h='<div class="sum-head">2026年东莞实习巡点 · 7 天行程汇总（'+rows.length+' 天 · 32 点全巡 · 学生合计 '+rows.reduce(function(s,r){return s+r.total;},0)+' 人）</div>';
-  h+='<table class="'+cls+'"><thead><tr><th style="width:7%">天数</th><th style="width:18%">片区覆盖</th><th style="width:34%">巡点单位（人数）</th><th style="width:8%">学生数</th><th style="width:12%">市内车程</th><th style="width:9%">巡点收工</th><th style="width:12%">备注</th></tr></thead><tbody>';
+  h+='<table class="'+cls+'"><thead><tr><th style="width:6%">天数</th><th style="width:15%">片区覆盖</th><th style="width:30%">巡点单位（人数）</th><th style="width:6%">学生数</th><th style="width:21%">联系人（姓名/电话）</th><th style="width:9%">巡点收工</th><th style="width:13%">备注</th></tr></thead><tbody>';
   rows.forEach(function(r){
-    h+='<tr><td class="c">'+r.day+'</td><td>'+r.cover+'</td><td class="sum-pts">'+r.pts+'</td><td class="c">'+r.total+'</td><td class="c">'+r.drive+'</td><td class="c">'+r.end+'</td><td class="sum-note"></td></tr>';
+    var ct=r.contacts.map(function(c){return '<div style="margin:1px 0">'+c+'</div>';}).join('');
+    h+='<tr><td class="c">'+r.day+'</td><td>'+r.cover+'</td><td class="sum-pts">'+r.pts+'</td><td class="c">'+r.total+'</td><td class="sum-pts">'+ct+'</td><td class="c">'+r.end+'</td><td class="sum-note"></td></tr>';
   });
   h+='<tr class="sum-total"><td class="c">合计</td><td>7 天 · 32 点全巡</td><td class="sum-pts">32 个巡点单位</td><td class="c">'+rows.reduce(function(s,r){return s+r.total;},0)+'</td><td></td><td></td><td></td></tr></tbody></table>';
   return h;
