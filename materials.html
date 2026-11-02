@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>访企拓岗材料包（可打印）· 药学院</title>
+<link href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d316e;--accent:#0f9d76;--ink:#1f2a3a;--muted:#5c6b85;--line:#cdd8e8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC',system-ui,'Microsoft YaHei',sans-serif;color:var(--ink);line-height:1.7;background:#eef2f7;font-size:14px;padding:24px}
+.sheet{background:#fff;max-width:820px;margin:0 auto 26px;padding:34px 38px;border:1px solid var(--line);box-shadow:0 6px 20px rgba(13,49,110,.08);border-radius:8px}
+.topbar{max-width:820px;margin:0 auto 14px;display:flex;justify-content:space-between;align-items:center}
+.btn{background:var(--accent);color:#fff;border:0;padding:10px 18px;border-radius:9px;font-weight:700;font-size:14px;cursor:pointer}
+.btn:hover{background:#0b7d5c}
+h1.doc{font-size:21px;text-align:center;color:var(--navy);font-weight:900;letter-spacing:1px}
+.sub{text-align:center;color:var(--muted);font-size:12.5px;margin:4px 0 18px}
+h2.sec{font-size:16px;color:#fff;background:var(--navy);padding:8px 14px;border-radius:7px;margin:22px 0 14px}
+.note{background:#f3f8ff;border:1px solid #d6e6fb;color:#1d4f8c;font-size:12.5px;padding:10px 14px;border-radius:7px;margin:10px 0}
+.row{display:flex;gap:18px;margin:9px 0;flex-wrap:wrap}
+.fld{flex:1;min-width:200px}
+.fld label{display:block;font-size:12.5px;color:var(--muted);font-weight:500}
+.fld .line{border-bottom:1.5px solid var(--ink);height:24px;margin-top:3px}
+.box{border:1.5px solid var(--ink);border-radius:8px;padding:14px 16px;margin:10px 0}
+.box .ttl{font-weight:700;color:var(--navy);font-size:13.5px;margin-bottom:8px}
+.chk{display:inline-block;width:15px;height:15px;border:1.5px solid var(--ink);border-radius:3px;vertical-align:-2px;margin-right:6px}
+.who{font-size:12px;color:var(--accent);font-weight:700;margin:14px 0 4px}
+.script{background:#f7fafc;border-left:4px solid var(--accent);padding:10px 14px;margin:8px 0;font-size:13px;color:#33425c}
+ol.q{padding-left:22px;line-height:2;font-size:13.5px}
+.letter{font-size:14px;line-height:2.1}
+.letter .blank{border-bottom:1.5px solid var(--ink);display:inline-block;min-width:160px}
+.sign{margin-top:30px;text-align:right;font-size:14px;line-height:2.2}
+@media print{
+  body{background:#fff;padding:0}
+  .topbar{display:none}
+  .sheet{box-shadow:none;border:0;margin:0;max-width:100%;padding:10px 4px}
+  h2.sec{break-after:avoid}
+  .box,.row{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span style="color:#566;font-size:13px">药学院 · 访企拓岗材料包（可打印）</span>
+  <button class="btn" onclick="window.print()">🖨 打印 / 存 PDF</button>
+</div>
+
+<!-- ========== 走访记录表 ========== -->
+<div class="sheet" id="record">
+  <h1 class="doc">肇庆医学院药学院 · 访企拓岗走访记录表</h1>
+  <p class="sub">每家填一份 · 走访后 3 个工作日内回填附件1 · 一企一档归档</p>
+  <div class="row">
+    <div class="fld"><label>走访日期</label><div class="line"></div></div>
+    <div class="fld"><label>走访时段</label><div class="line"></div></div>
+  </div>
+  <div class="row">
+    <div class="fld" style="flex:2"><label>走访单位（全称）</label><div class="line"></div></div>
+    <div class="fld"><label>单位类型</label><div class="line"></div></div>
+  </div>
+  <div class="row">
+    <div class="fld" style="flex:2"><label>单位地址</label><div class="line"></div></div>
+    <div class="fld"><label>员工规模</label><div class="line"></div></div>
+  </div>
+
+  <h2 class="sec">对方接待人员</h2>
+  <div class="row">
+    <div class="fld"><label>姓名</label><div class="line"></div></div>
+    <div class="fld"><label>职务</label><div class="line"></div></div>
+    <div class="fld"><label>电话</label><div class="line"></div></div>
+    <div class="fld"><label>微信/邮箱</label><div class="line"></div></div>
+  </div>
+  <div class="row"><div class="fld"><label>是否有决定权　<span class="chk"></span>有　<span class="chk"></span>需上报　<span class="chk"></span>不清楚</label></div></div>
+
+  <h2 class="sec">我方走访人员（至少 2 人，1 人为领导/教研室负责人）</h2>
+  <div class="row">
+    <div class="fld"><label>1. 姓名 / 职务</label><div class="line"></div></div>
+    <div class="fld"><label>2. 姓名 / 职务</label><div class="line"></div></div>
+    <div class="fld"><label>3. 姓名 / 职务</label><div class="line"></div></div>
+  </div>
+
+  <h2 class="sec">招聘需求</h2>
+  <div class="row">
+    <div class="fld"><label>就业岗位数</label><div class="line"></div></div>
+    <div class="fld"><label>需求专业</label><div class="line"></div></div>
+    <div class="fld"><label>薪资范围</label><div class="line"></div></div>
+    <div class="fld"><label>到岗时间</label><div class="line"></div></div>
+  </div>
+  <div class="row"><div class="fld" style="flex:2"><label>岗位名称及人数</label><div class="line"></div></div></div>
+
+  <h2 class="sec">实习合作</h2>
+  <div class="row"><div class="fld"><label>是否有意愿　<span class="chk"></span>是　<span class="chk"></span>否　<span class="chk"></span>待谈</label></div></div>
+  <div class="row">
+    <div class="fld"><label>实习专业</label><div class="line"></div></div>
+    <div class="fld"><label>人数</label><div class="line"></div></div>
+    <div class="fld"><label>实习时间段</label><div class="line"></div></div>
+  </div>
+
+  <h2 class="sec">双选会（12 月底）</h2>
+  <div class="row"><div class="fld"><label>是否愿意参加　<span class="chk"></span>是　<span class="chk"></span>否　<span class="chk"></span>待定</label></div>
+  <div class="fld"><label>需要　<span class="chk"></span>展位　<span class="chk"></span>宣讲　<span class="chk"></span>都不需要</label></div></div>
+
+  <h2 class="sec">合作意向</h2>
+  <div class="row"><div class="fld"><label><span class="chk"></span>现场签实习基地协议　<span class="chk"></span>意向书待签　<span class="chk"></span>仅口头意向　<span class="chk"></span>无</label></div></div>
+
+  <h2 class="sec">对方意见建议（人才培养、课程设置等）</h2>
+  <div class="box" style="min-height:70px"></div>
+
+  <h2 class="sec">后续待办（谁 · 什么时候 · 做什么）</h2>
+  <div class="box" style="min-height:60px"></div>
+
+  <div class="sign">
+    走访人签字：________________　　日期：______ 年 ____ 月 ____ 日
+  </div>
+  <div class="note">附：现场照片 2–3 张（门头/标识 1 张 + 座谈场景 1–2 张），与附件1 的「走访单位名称」严格一致命名。</div>
+</div>
+
+<!-- ========== 邀约函 ========== -->
+<div class="sheet" id="invite">
+  <h1 class="doc">邀　请　函</h1>
+  <p class="sub">正式件 · 需学院盖章走办公室流程 · 关老师只出稿送审，不代盖</p>
+  <div class="letter">
+    <p style="text-align:right;margin-bottom:18px">编号：＿＿＿＿＿</p>
+    <p>尊敬的 <span class="blank"></span>（单位全称）：</p>
+    <p>　　为促进高校毕业生高质量充分就业，深化校企合作，我校定于 <b>2026 年 12 月底</b>举办 2027 届毕业生校园双选会。届时将有药学、中药学等相关专业毕业生参会求职。</p>
+    <p>　　贵单位在医药领域具有良好的行业影响力，特此诚邀贵单位拨冗参会，选聘优秀人才。我校将为参会单位<b>免费提供展位、桌椅及招聘信息发布服务</b>，并协助安排宣讲场地。</p>
+    <p>　　如蒙应允，请于 ____ 月 ____ 日前将参会回执反馈至我处，以便统一安排展位。</p>
+    <p>　　联系人：关子岳　　电话：13257585879　　邮箱：guan4425390@163.com</p>
+    <div class="sign">
+      <p>肇庆医学院药学院</p>
+      <p>2026 年　　&#160;&#160;月　　&#160;&#160;日</p>
+      <p style="margin-top:18px">（加盖学院公章）</p>
+    </div>
+  </div>
+  <div class="note">微信/短信邀约（首选，短）：X 经理您好，我是肇庆医学院药学院关老师，上次到贵单位拜访过。我校 12 月底举办校园双选会，2027 届药学类毕业生参会，想邀请贵单位来校设展招聘，展位免费。方便我把邀请函和参会回执发您？</div>
+</div>
+
+<!-- ========== 话术速查 ========== -->
+<div class="sheet" id="scripts">
+  <h1 class="doc">话术速查（出门前看一遍）</h1>
+  <p class="sub">所有对外文字都只是稿子，发出去前把关老师自己过一遍</p>
+
+  <h2 class="sec">电话初筛 · 开场（找对人）</h2>
+  <div class="script">您好，我是肇庆医学院药学院的关老师。我们学校在做访企拓岗，想了解一下贵单位今年有没有招药学专业毕业生的计划。请问这方面是跟人力资源部哪位对接比较合适？</div>
+
+  <h2 class="sec">三种场景</h2>
+  <div class="script"><span class="who">场景 A · 对方说「现在不招人」</span>理解，那方便问一下贵单位明年上半年有没有补充计划？我们不是要您现在给岗位，主要是先建立联系。我们学生是药学本科，实习和就业都可以配合。<b>目标：哪怕不招，也留下联系人+微信，进台账标「无意向」。</b></div>
+  <div class="script"><span class="who">场景 B · 对方说「招，但人不多」</span>大概几个岗位？如果是 1 个我们也会报，只是学校统计上希望有一定规模。另外实习这块贵单位接不接？<b>注意：只招 1 人的低价值岗位可报但备注。</b></div>
+  <div class="script"><span class="who">场景 C · 对方有兴趣，问我们要什么</span>我们想约个时间上门拜访，大概 40 分钟，学院领导会一起去。主要想了解三件事：今年的招聘计划、对毕业生的能力要求、能不能建实习合作。您看这周还是下周方便？<b>关键：亮出「40 分钟」和「学院领导会去」。</b></div>
+
+  <h2 class="sec">座谈只问这 6 个问题</h2>
+  <ol class="q">
+    <li>今年/明年计划招多少人？什么岗位？（→ 就业需求专业、人数）</li>
+    <li>对毕业生有什么硬性要求？证书、技能、经验？（→ 人才培养反馈）</li>
+    <li>现在最缺什么样的人？招不到的原因是什么？（→ <b>最有价值的切口</b>）</li>
+    <li>接不接实习生？一次能接几个？什么时间段？</li>
+    <li>愿不愿意参加 12 月底的校园双选会？</li>
+    <li>有没有兴趣签实习基地协议 / 合作意向书？</li>
+  </ol>
+</div>
+
+</body>
+</html>
