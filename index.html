@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>访企拓岗 · 巡点一体化工作台 | 药学院</title>
+<title>访企拓岗材料工作台 | 药学院</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' rx='7' fill='%230d316e'/%3E%3Cpath d='M9 17l4 4 10-10' stroke='%230f9d76' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
@@ -24,7 +24,7 @@ h1,h2,h3{line-height:1.3;font-weight:700}
 h2.section-title{font-size:25px;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px}
 h2.section-title .bar{width:6px;height:26px;border-radius:3px;background:var(--accent)}
 .sub{color:var(--muted);font-size:14px;margin-bottom:22px}
-.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--accent);text-transform:none}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--accent)}
 
 /* ===== Nav ===== */
 nav{position:sticky;top:0;z-index:60;background:rgba(13,49,110,.97);backdrop-filter:blur(8px);
@@ -47,8 +47,6 @@ nav .wrap{display:flex;align-items:center;gap:6px;height:54px}
 .hero .wrap{position:relative;z-index:2}
 .hero h1{font-size:38px;font-weight:900;letter-spacing:-.5px;margin:10px 0 12px}
 .hero p.lead{font-size:16.5px;color:#d6e4fb;max-width:760px;font-weight:300}
-.hero .two{display:inline-flex;align-items:center;gap:10px;margin-top:14px;background:rgba(15,157,118,.18);
-  border:1px solid rgba(15,157,118,.5);color:#bff0dd;padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500}
 .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
 .hero-stats .b{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:16px 18px}
 .hero-stats .b .k{font-size:13px;color:#a9c4ee;font-weight:500}
@@ -69,18 +67,6 @@ section{padding:46px 0;border-bottom:1px solid var(--line)}
   box-shadow:0 2px 10px rgba(13,49,110,.04)}
 .grid{display:grid;gap:16px}
 .g3{grid-template-columns:repeat(3,1fr)}
-.g2{grid-template-columns:repeat(2,1fr)}
-.g4{grid-template-columns:repeat(4,1fr)}
-
-/* 双线合一两卡 */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.pillar{border-radius:var(--radius);padding:22px;color:#fff;position:relative;overflow:hidden}
-.pillar.patrol{background:linear-gradient(135deg,#1a5fb4,#0d316e)}
-.pillar.expand{background:linear-gradient(135deg,#0f9d76,#0b7d5c)}
-.pillar h3{font-size:19px;margin-bottom:6px}
-.pillar .tag{font-size:12px;opacity:.85;font-weight:500}
-.pillar p{font-size:14px;margin-top:10px;opacity:.95;font-weight:300}
-.pillar .arrow{position:absolute;right:14px;bottom:10px;font-size:30px;opacity:.25}
 
 /* 三要素 */
 .feat .ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px}
@@ -95,47 +81,11 @@ section{padding:46px 0;border-bottom:1px solid var(--line)}
 .badge.ok{background:var(--accent-soft);color:var(--accent-deep)}
 .badge.info{background:var(--blue-soft);color:var(--blue)}
 
-/* 目标数字 */
-.goals{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.goal{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
-.goal .n{font-size:30px;font-weight:900;color:var(--accent)}
-.goal .n small{font-size:15px;font-weight:700}
-.goal .l{font-size:13px;color:var(--muted);margin-top:4px}
-
-/* 表格 */
-.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
-table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
-th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
-thead th{background:var(--navy);color:#fff;font-weight:500;white-space:nowrap;position:sticky;top:0}
-tbody tr:nth-child(even){background:#f8fbfe}
-tbody tr:hover{background:var(--accent-soft)}
-td .unit{font-weight:700;color:var(--ink)}
-td .cut{color:var(--muted);font-size:12.5px;display:block;margin-top:3px}
-.chip{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--blue-soft);color:var(--blue)}
-.chip.stock{background:var(--amber-soft);color:#b4601f}
-.chip.b{background:#eef1f6;color:#566}
-
 /* 话术 */
 .script{background:#fbfcfe;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;
   padding:14px 16px;font-size:14px;color:#33425c;margin:10px 0}
 .script .who{font-weight:700;color:var(--navy);font-size:12.5px;display:block;margin-bottom:4px}
 .script .who.c{color:var(--accent-deep)}
-
-/* 怎么做 steps */
-.steps{counter-reset:s;display:grid;gap:12px}
-.step{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start;background:#fff;border:1px solid var(--line);
-  border-radius:12px;padding:16px 18px}
-.step::before{counter-increment:s;content:counter(s);width:46px;height:46px;border-radius:12px;background:var(--navy);color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900}
-.step h4{font-size:16px;margin-bottom:4px}
-.step p{font-size:14px;color:var(--muted)}
-
-/* callouts */
-.callout{border-radius:12px;padding:16px 18px;font-size:14px;margin:14px 0;border:1px solid}
-.callout.warn{background:var(--amber-soft);border-color:#f3d3ad;color:#7a4a12}
-.callout.info{background:var(--blue-soft);border-color:#cfe0f6;color:#1d4f8c}
-.callout.danger{background:var(--red-soft);border-color:#f1c4c2;color:#8d2b28}
-.callout b{font-weight:700}
 
 /* 下载中心 */
 .dl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -160,9 +110,7 @@ footer a{color:#9fd0ff}
 
 /* 响应式 */
 @media(max-width:860px){
-  .g3,.g4,.dl{grid-template-columns:1fr 1fr}
-  .goals{grid-template-columns:1fr 1fr}
-  .two-col,.g2{grid-template-columns:1fr}
+  .g3,.dl{grid-template-columns:1fr 1fr}
   .hero h1{font-size:30px}
   .nav-toggle{display:block}
   .nav-links{display:none;position:absolute;top:54px;left:0;right:0;background:var(--navy);
@@ -170,7 +118,7 @@ footer a{color:#9fd0ff}
   .nav-links.open{display:flex}
   .nav-links a{padding:10px 12px}
 }
-@media(max-width:520px){.g3,.g4,.dl,.goals{grid-template-columns:1fr}}
+@media(max-width:520px){.g3,.dl{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
 </style>
@@ -179,17 +127,12 @@ footer a{color:#9fd0ff}
 
 <nav>
   <div class="wrap">
-    <div class="brand"><span class="dot"></span>访企拓岗 · 巡点工作台</div>
+    <div class="brand"><span class="dot"></span>访企拓岗材料工作台</div>
     <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
     <div class="nav-links" id="nl">
       <a href="#overview">总览</a>
-      <a href="#combo">双线合一</a>
       <a href="#elements">三要素</a>
-      <a href="#plan">拓岗计划</a>
-      <a href="#targets">12家目标</a>
       <a href="#scripts">话术模板</a>
-      <a href="#how">怎么做</a>
-      <a href="#confirm">待确认</a>
       <a href="#download">材料下载</a>
       <a href="#map">巡点地图</a>
     </div>
@@ -197,59 +140,35 @@ footer a{color:#9fd0ff}
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="overview">
   <div class="wrap">
     <span class="eyebrow" style="color:#9fe6cf">药学院 · 2026 访企拓岗促就业专项活动</span>
-    <h1>一次出门，两件事一次办</h1>
-    <p class="lead">东莞实习<b>巡点</b>看实习生，顺路把<b>访企拓岗</b>的企业也走了。行程、话术、要填的表、要交的材料，全在这一页，出发前一次领齐。</p>
-    <div class="two">📌 方案明写：借学生校外实习巡点，顺路走访企业拓岗</div>
+    <h1>访企拓岗，材料一次领齐</h1>
+    <p class="lead">要交什么、话术怎么讲、表怎么填、材料去哪下，全在这一页。出门前打开，照着做。</p>
     <div class="hero-stats">
       <div class="b"><div class="k">东莞实习巡点</div><div class="v">32 点位 · 693 学生 · 7 天</div></div>
-      <div class="b"><div class="k">访企拓岗硬指标</div><div class="v">≥10 家新开发 · ≥60 岗位</div></div>
+      <div class="b"><div class="k">访企拓岗硬指标</div><div class="v">每学院 ≥10 家新开发单位</div></div>
       <div class="b"><div class="k">收官节点</div><div class="v">12 月底双选会 · 2027.1 截止</div></div>
     </div>
     <div class="hero-cta">
-      <a class="btn btn-accent" href="#download">⬇ 下载材料包</a>
-      <a class="btn btn-ghost" href="#map">🗺 打开巡点地图</a>
-      <a class="btn btn-ghost" href="materials.html" target="_blank">🖨 可打印材料（记录表/邀约函）</a>
+      <a class="btn btn-accent" href="#download">⬇ 下载必备材料</a>
+      <a class="btn btn-ghost" href="#scripts">📋 话术与模板</a>
+      <a class="btn btn-ghost" href="#map">🗺 巡点地图</a>
     </div>
   </div>
 </header>
-
-<!-- 双线合一 -->
-<section id="combo">
-  <div class="wrap">
-    <h2 class="section-title"><span class="bar"></span>两件事，为什么放一起办</h2>
-    <p class="sub">老师本来就要出门巡实习点，方案又要求「借巡点顺路走访企业」。把两套材料合并到一个入口，老师出门只带这一个链接。</p>
-    <div class="two-col">
-      <div class="pillar patrol">
-        <span class="tag">已经在进行</span>
-        <h3>东莞实习巡点</h3>
-        <p>看实习生实习状态、对接科教科、查食宿环境，线上填《实习巡点记录表》。7 天跑完 32 个点位。</p>
-        <div class="arrow">→</div>
-      </div>
-      <div class="pillar expand">
-        <span class="tag">顺路叠加</span>
-        <h3>访企拓岗促就业</h3>
-        <p>在同一次出门里，就近/专项走访医药企业，谈招聘计划、挖岗位、邀双选会，填《附件1》并归档。</p>
-        <div class="arrow">→</div>
-      </div>
-    </div>
-    <div class="callout info"><b>一句话分工：</b>书记/院长带队定去向，关老师（辅导员）统筹名单、台账、材料报送。对外打电话、发函、交表只出稿，由本人执行。</div>
-  </div>
-</section>
 
 <!-- 三要素 -->
 <section id="elements">
   <div class="wrap">
     <h2 class="section-title"><span class="bar"></span>三要素速览（结论先行）</h2>
-    <p class="sub">来源：《访企拓岗促就业专项活动实施方案》+ 罗伟宏电话录音。标 ⚠️ 的是方案没写清、需要先问的。</p>
+    <p class="sub">来源：《访企拓岗促就业专项活动实施方案》+ 就业指导中心录音。标 ⚠️ 的是方案没写清、需要先问的。</p>
     <div class="grid g3">
       <div class="card feat blue">
         <div class="ico">📄</div>
         <h3>要交什么材料</h3>
         <ul>
-          <li>①《附件1 访企拓岗信息表》（14 列，按走访单位填，报罗伟宏）</li>
+          <li>①《附件1 访企拓岗信息表》（14 列，按走访单位填，报就业指导中心）</li>
           <li>② 本院访企拓岗工作计划</li>
           <li>③ 走访材料归档（一企一档）</li>
         </ul>
@@ -277,114 +196,14 @@ footer a{color:#9fd0ff}
   </div>
 </section>
 
-<!-- 工作计划 -->
-<section id="plan">
-  <div class="wrap">
-    <h2 class="section-title"><span class="bar"></span>访企拓岗工作计划（草案）</h2>
-    <p class="sub">依据实施方案起草，按「书记院长带队、辅导员统筹台账」分工。待学院审定。</p>
-
-    <h3 style="margin:6px 0 12px;font-size:18px;color:var(--navy)">一、四个量化目标</h3>
-    <div class="goals">
-      <div class="goal"><div class="n">≥10<small> 家</small></div><div class="l">新开发优质单位（目标值 12 家，留 2 家余量）</div></div>
-      <div class="goal"><div class="n">≥60<small> 个</small></div><div class="l">累计就业岗位（仅招 1 人不计入成效）</div></div>
-      <div class="goal"><div class="n">≥80<small>%</small></div><div class="l">新开发占比（存量≤2 家）</div></div>
-      <div class="goal"><div class="n">≥3<small> 家</small></div><div class="l">签实习基地/合作意向；≥5 家参加双选会</div></div>
-    </div>
-
-    <h3 style="margin:26px 0 12px;font-size:18px;color:var(--navy)">二、组织架构</h3>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>角色</th><th>人员</th><th>职责</th></tr></thead>
-        <tbody>
-          <tr><td class="unit">组长</td><td>党委书记、院长</td><td>带头走访、对接校领导、审定计划与名单</td></tr>
-          <tr><td class="unit">副组长</td><td>分管学生工作领导</td><td>统筹推进、协调巡点与走访合并安排</td></tr>
-          <tr><td class="unit">联络员</td><td>关子岳（辅导员）</td><td>制定计划、维护目标池、登记台账、催收材料、报送附件1</td></tr>
-          <tr><td class="unit">成员</td><td>教研室主任、班主任、就业干事</td><td>提供行业线索、参与走访、收集岗位需求</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 style="margin:26px 0 12px;font-size:18px;color:var(--navy)">三、走访对象四类（优先无合作历史的新单位）</h3>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>类别</th><th>说明</th><th>目标家数</th></tr></thead>
-        <tbody>
-          <tr><td><span class="chip">A</span> 药品生产</td><td>化药/中成药/中药饮片企业，需求 QA、QC、生产工艺、GMP 管理</td><td>4 家</td></tr>
-          <tr><td><span class="chip">B</span> 医药流通零售</td><td>药品批发、连锁药房总部，需求药师、门店管理、采购、仓储物流</td><td>3 家</td></tr>
-          <tr><td><span class="chip">C</span> 医疗机构药学</td><td>综合医院/中医院/专科医院 药剂科、制剂室、临床药学</td><td>2 家</td></tr>
-          <tr><td><span class="chip">D</span> 监管检测</td><td>药检所、市场监管技术机构、第三方检测</td><td>1 家</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 style="margin:26px 0 12px;font-size:18px;color:var(--navy)">四、时间安排（倒排）</h3>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>阶段</th><th>时间</th><th>主要动作</th><th>产出</th></tr></thead>
-        <tbody>
-          <tr><td class="unit">准备</td><td>10 月底前</td><td>定名单、分组、备材料包（介绍信/学院简介/生源表/附件1空白表）</td><td>计划 + 名单</td></tr>
-          <tr><td class="unit">第一批</td><td>11 月上旬</td><td>书记院长带队，走访 A 类生产 3–4 家</td><td>走访记录 + 岗位需求</td></tr>
-          <tr><td class="unit">第二批</td><td>11 月中下旬</td><td>结合实习巡点，就近走访 B/C 类 3–4 家</td><td>记录 + 实习合作意向</td></tr>
-          <tr><td class="unit">第三批</td><td>12 月上旬</td><td>走访剩余单位，确认双选会参会意向</td><td>双选会名单</td></tr>
-          <tr><td class="unit">双选会</td><td>12 月底</td><td>组织企业进场，现场对接</td><td>签到 + 意向登记</td></tr>
-          <tr><td class="unit">收尾</td><td>12 中—2027.1</td><td>补走访、汇总附件1、归档、写总结</td><td>附件1 + 归档包 + 总结</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="callout info"><b>归档口径：</b>一企一档，命名 <code>YYYY-MM-DD_单位全称_走访材料/</code>，每档含走访记录表、照片 2–3 张、招聘简章、附件1 对应行。台账统一登在《走访台账》。附件1 用<b>扩行版</b>（12 家位），<b>不要在原表上直接填</b>（原表只留 5 家位置）。</div>
-  </div>
-</section>
-
-<!-- 12家目标 -->
-<section id="targets">
-  <div class="wrap">
-    <h2 class="section-title"><span class="bar"></span>12 家目标清单（重新排定）</h2>
-    <p class="sub">经企查查核验、上一次招聘会存量比对后排定。新开发 10 家 + 存量补充 2 家（存量不计入新开发）。</p>
-
-    <h3 style="margin:4px 0 12px;font-size:17px;color:var(--accent-deep)">新开发 10 家</h3>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>#</th><th>单位</th><th>类型</th><th>参保/规模</th><th>距新区校区</th><th>批次</th><th>第一句切口</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td class="unit">广东逸舒制药股份有限公司<span class="cut">化药制剂 · 核心目标</span></td><td><span class="chip">A</span></td><td>202 人</td><td>31.6km / 37min / 高速10元</td><td>第二批</td><td class="cut">生产、包装、仓储要不要人，实习生接不接（不谈 QA/QC）</td></tr>
-          <tr><td>2</td><td class="unit">佛山德芮可制药有限公司<span class="cut">缓控释制剂（外资）</span></td><td><span class="chip">A</span></td><td>221 人</td><td>跨市约 2h</td><td>第四批</td><td class="cut">分析岗助理 + 暑期实习基地</td></tr>
-          <tr><td>3</td><td class="unit">肇庆星湖制药有限公司<span class="cut">中西药制剂</span></td><td><span class="chip">A</span></td><td>81 人</td><td>33.1km / 44min</td><td>第一批可并</td><td class="cut">实习+少量就业，中药提取车间要不要中药学</td></tr>
-          <tr><td>4</td><td class="unit">广东隆信制药有限公司<span class="cut">化药制剂</span></td><td><span class="chip">A</span></td><td>75 人</td><td>跨市约 2h</td><td>第四批</td><td class="cut">招聘会挂的储备干部/实习生 23 人，来校做专场</td></tr>
-          <tr><td>5</td><td class="unit">广东吉药医药有限公司<span class="cut">医药批发（麻精资质）</span></td><td><span class="chip">B</span></td><td>35 人</td><td>四会城区</td><td>第二批备选</td><td class="cut">麻精区域批发资质，GSP 质管/仓储岗能对上</td></tr>
-          <tr><td>6</td><td class="unit">广东元宁制药有限公司<span class="cut">化药制剂</span></td><td><span class="chip">A</span></td><td>22 人</td><td>69.3km / 74min</td><td>第三批（与广宁人医同天）</td><td class="cut">跟广宁县人民医院同天，谈实习+少量就业</td></tr>
-          <tr><td>7</td><td class="unit">四会市人民医院<span class="cut">公立综合</span></td><td><span class="chip">C</span></td><td>—</td><td>20.5km / 32min</td><td>第二批</td><td class="cut">药剂科合同制药剂士每年招几个，本地生源占 38%</td></tr>
-          <tr><td>8</td><td class="unit">广宁县人民医院<span class="cut">公立综合</span></td><td><span class="chip">C</span></td><td>—</td><td>69.3km / 74min / 高速21元</td><td>第三批</td><td class="cut">今年药剂科有无补员计划，一次问清</td></tr>
-          <tr><td>9</td><td class="unit">肇庆市皮肤病医院<span class="cut">公立专科（有制剂室）</span></td><td><span class="chip">C</span></td><td>—</td><td>32.5km / 38min</td><td>第一批</td><td class="cut">有制剂室，能否接收实习生</td></tr>
-          <tr><td>10</td><td class="unit">肇庆市食品药品检验所<span class="cut">检验机构</span></td><td><span class="chip">D</span></td><td>—</td><td>23.1km / 28min</td><td>第一批</td><td class="cut">检验辅助/抽样岗 + 实习基地（重点谈实习）</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 style="margin:22px 0 12px;font-size:17px;color:#b4601f">存量补充 2 家（不计入新开发）</h3>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>#</th><th>单位</th><th>规模</th><th>为什么还要走</th></tr></thead>
-        <tbody>
-          <tr><td>11</td><td class="unit">广东邦健医药连锁有限公司</td><td>本部 652 + 分支 763</td><td>全校吸纳量最大，810 人最现实的出口</td></tr>
-          <tr><td>12</td><td class="unit">肇庆焕发生物科技有限公司</td><td>653 人</td><td>药学岗 15 条、已填需求 28 人，全场最多</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="callout warn"><b>结构提醒：</b>新开发 10 家里有 <b>4 家是事业单位</b>（3 家医院 + 1 家检验所）。如果罗伟宏认定「新开发」只算企业，就只剩 6 家，不够 10 家。这个口径<b>必须先问清</b>（见「待确认」第 1 条）。</div>
-    <div class="callout info"><b>生源这刀改了策略：</b>2027 届 810 人<b>全部是专科</b>（药学 563、中药学 172、药品经营与管理 75）。谈岗位要问「有没有专科能做的岗」，别只问「招不招药学」——前者对方会告诉你生产/包装/仓储/门店都要，后者对方看招聘启事答「要本科」。</div>
-  </div>
-</section>
-
 <!-- 话术模板 -->
 <section id="scripts">
   <div class="wrap">
     <h2 class="section-title"><span class="bar"></span>话术与模板（出门前看一遍）</h2>
-    <p class="sub">所有对外文字都只是稿子，发出去前把关老师自己过一遍（领导职务、单位名称）。</p>
+    <p class="sub">所有对外文字都只是稿子，发出去前自己过一遍（领导职务、单位名称）。</p>
 
     <h3 style="margin:4px 0 10px;font-size:17px;color:var(--navy)">电话初筛 · 开场（找对人）</h3>
-    <div class="script"><span class="who">关老师 → 对方</span>您好，我是肇庆医学院药学院的关老师。我们学校在做访企拓岗，想了解一下贵单位今年有没有招药学专业毕业生的计划。请问这方面是跟人力资源部哪位对接比较合适？</div>
+    <div class="script"><span class="who">我方 → 对方</span>您好，我是肇庆医学院药学院的老师。我们学校在做访企拓岗，想了解一下贵单位今年有没有招药学专业毕业生的计划。请问这方面是跟人力资源部哪位对接比较合适？</div>
 
     <h3 style="margin:18px 0 10px;font-size:17px;color:var(--navy)">三种场景应对</h3>
     <div class="script"><span class="who c">场景 A · 对方说「现在不招人」</span>理解，那方便问一下贵单位明年上半年有没有补充计划？我们不是要您现在给岗位，主要是先建立联系。我们学生是药学本科，实习和就业都可以配合。<b style="color:var(--accent-deep)">目标：哪怕不招，也留下联系人+微信，进台账标「无意向」。</b></div>
@@ -404,7 +223,7 @@ footer a{color:#9fd0ff}
     </div>
 
     <h3 style="margin:18px 0 10px;font-size:17px;color:var(--navy)">现场要带的表 & 双选会邀约</h3>
-    <div class="grid g2">
+    <div class="grid g3">
       <div class="card">
         <h3 style="font-size:16px;margin-bottom:8px">📋 走访记录表（每家一份）</h3>
         <p style="font-size:14px;color:var(--muted);margin-bottom:12px">走访日期、双方人员、招聘需求、实习合作、双选会、合作意向、意见建议、后续待办，一表收齐。</p>
@@ -412,80 +231,14 @@ footer a{color:#9fd0ff}
       </div>
       <div class="card">
         <h3 style="font-size:16px;margin-bottom:8px">✉️ 双选会邀约函（正式件）</h3>
-        <p style="font-size:14px;color:var(--muted);margin-bottom:12px">微信/短信版随手发，正式函需学院盖章走办公室流程。关老师只出稿送审，不代盖。</p>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:12px">微信/短信版随手发，正式函需学院盖章走办公室流程。只出稿送审，不代盖。</p>
         <a class="btn btn-navy" href="materials.html#invite" target="_blank">打开 / 打印邀约函</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- 怎么做 -->
-<section id="how">
-  <div class="wrap">
-    <h2 class="section-title"><span class="bar"></span>怎么做：从名单到双选会</h2>
-    <p class="sub">照这个顺序走，别一上来就打电话——先把名单和口径定下来。</p>
-    <div class="steps">
-      <div class="step"><div><h4>定名单，找领导过目</h4><p>把 12 家清单打印出来，圈出第一批 3 家 + 第二批 3 家，找书记/院长定带队人和时间。领导点头，后面要车、盖章都顺。</p></div></div>
-      <div class="step"><div><h4>先问清罗伟宏 3 件事</h4><p>①「新开发」算不算事业单位？②存量单位算不算新合作？③附件1 什么时候交？这三条决定 10 家能不能凑齐，一次问完。</p></div></div>
-      <div class="step"><div><h4>打电话只约时间</h4><p>按话术打 6 个电话（第一批 3 家 + 逸舒 + 邦健 + 吉药），只约时间不深谈，记录进台账。</p></div></div>
-      <div class="step"><div><h4>上门带记录表</h4><p>每家至少 2 人到场，其中 1 人为学院领导或教研室负责人。现场填《走访记录表》、拍门头+座谈照片 2–3 张。</p></div></div>
-      <div class="step"><div><h4>填附件1 + 归档</h4><p>走访后 3 个工作日内把信息誊到附件1 扩行版；5 个工作日内完成一企一档归档。</p></div></div>
-      <div class="step"><div><h4>12 月邀双选会</h4><p>对已走访、有意向的企业发邀约函，确认展位需求，拉进 12 月底双选会。</p></div></div>
-    </div>
-    <div class="callout warn"><b>头三天动作清单：</b>当天微信感谢+重申合作点；+1 天填记录表、照片归档；+2 天誊附件1；+3 天台账更新「已走访」；每周五汇总本周走访数、岗位数报学院领导。</div>
-  </div>
-</section>
-
-<!-- 待确认 -->
-<section id="confirm">
-  <div class="wrap">
-    <h2 class="section-title"><span class="bar"></span>待确认口径 & 已知风险</h2>
-    <p class="sub">这些不是漏了，是资料里确实没有。先问清再跑，别白跑。</p>
-
-    <h3 style="margin:4px 0 12px;font-size:17px;color:#b4601f">🔴 必须先问罗伟宏的 3 件事（比找企业更急）</h3>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>#</th><th>问题</th><th>为什么重要</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td class="unit">「新开发」算不算事业单位？</td><td>10 家里 4 家是医院/检验所，若只认企业就只剩 6 家</td></tr>
-          <tr><td>2</td><td class="unit">存量单位算不算「新建立合作」？</td><td>邦健、焕发都参加过招聘会但学院没单独走访过</td></tr>
-          <tr><td>3</td><td class="unit">附件1 什么时候交？</td><td>方案只写活动期到 2027.1、双选会 12 月底，没写报送时限</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 style="margin:22px 0 12px;font-size:17px;color:var(--navy)">其余待确认（一次性问完）</h3>
-    <div class="grid g2">
       <div class="card">
-        <h3 style="font-size:15px;margin-bottom:8px">问罗伟宏（收表人）</h3>
-        <ul style="margin:0;padding-left:18px;font-size:13.5px;color:var(--muted);line-height:1.9">
-          <li>岗位数有没有下限（必须 ≥3 人才计入？）</li>
-          <li>走访材料要交复印件给中心，还是学院留存？</li>
-          <li>双选会展位怎么申请、有没有回执表？</li>
-        </ul>
+        <h3 style="font-size:16px;margin-bottom:8px">📞 话术速查</h3>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:12px">电话初筛、三种场景、座谈 6 问，一页打印带走。</p>
+        <a class="btn btn-navy" href="materials.html#scripts" target="_blank">打开 / 打印话术</a>
       </div>
-      <div class="card">
-        <h3 style="font-size:15px;margin-bottom:8px">问学院内部</h3>
-        <ul style="margin:0;padding-left:18px;font-size:13.5px;color:var(--muted);line-height:1.9">
-          <li>2027 届有哪些专业、各多少人？（附件1 要填）</li>
-          <li>现有实习点名单（判断哪些是存量）</li>
-          <li>谁带队？校领导请哪位？</li>
-          <li>走访经费、用车怎么解决？</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 style="margin:22px 0 12px;font-size:17px;color:var(--red)">⚠️ 已知风险</h3>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>风险</th><th>影响</th><th>对策</th></tr></thead>
-        <tbody>
-          <tr><td class="unit">医疗机构多为存量</td><td>报上去可能不算新开发</td><td>医院控制在 2–3 家，其余攻企业</td></tr>
-          <tr><td class="unit">肇庆本地药企有限</td><td>高档位企业就那几家</td><td>候选池备 27 家，标「仅黄页需核实」</td></tr>
-          <tr><td class="unit">小企业岗位少</td><td>落入只招 1 人低价值区</td><td>优先逸舒、星湖、邦健等规模大的</td></tr>
-          <tr><td class="unit">岗位口径无硬标准</td><td>报多怕核不实、报少显没成效</td><td>只填明确承诺数，「看情况」填「待定」</td></tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </section>
@@ -493,56 +246,16 @@ footer a{color:#9fd0ff}
 <!-- 材料下载 -->
 <section id="download">
   <div class="wrap">
-    <h2 class="section-title"><span class="bar"></span>材料下载中心</h2>
-    <p class="sub">点一下就能下载 / 打开。含内部通讯信息的文件仅限校内团队使用，对外发布前删联系方式。</p>
+    <h2 class="section-title"><span class="bar"></span>材料下载</h2>
+    <p class="sub">本页仅提供方案要求提交的必备材料，点一下即可下载 / 打开。含内部通讯信息的文件仅限校内团队使用，对外发布前删联系方式。</p>
     <div class="dl">
       <a class="dcard" href="downloads/fujian1-form.xlsx" download>
         <span class="ft">核心 · 要填</span><span class="nm">附件1 访企拓岗信息表（扩行版）</span>
-        <span class="ds">12 家位（36 行），学历口径已改专科，别在原表上填</span><span class="dlbtn">⬇ 下载 xlsx</span>
-      </a>
-      <a class="dcard" href="downloads/target-list-v3.xlsx" download>
-        <span class="ft">名单</span><span class="nm">目标单位挖潜清单 v3</span>
-        <span class="ds">30 家候选，含所在地、匹配专业、优先级、信息来源</span><span class="dlbtn">⬇ 下载 xlsx</span>
-      </a>
-      <a class="dcard" href="downloads/visit-ledger-v3.xlsx" download>
-        <span class="ft">台账</span><span class="nm">走访台账 v3</span>
-        <span class="ds">走访进度、一企一档归档、双选会邀约</span><span class="dlbtn">⬇ 下载 xlsx</span>
-      </a>
-      <a class="dcard" href="downloads/student-route.xlsx" download>
-        <span class="ft">生源+路线</span><span class="nm">生源岗位匹配与走访路线</span>
-        <span class="ds">生源结构 / 19 家企查查核验 / 三批路线实测</span><span class="dlbtn">⬇ 下载 xlsx</span>
-      </a>
-      <a class="dcard" href="downloads/jobfair-leads.xlsx" download>
-        <span class="ft">线索</span><span class="nm">招聘会线索分析</span>
-        <span class="ds">156 家参会单位、38 家药学对口、154 个手机号</span><span class="dlbtn">⬇ 下载 xlsx</span>
-      </a>
-      <a class="dcard" href="downloads/last-jobfair.xlsx" download>
-        <span class="ft">存量核验</span><span class="nm">上一次招聘会岗位表（联系线索）</span>
-        <span class="ds">用于判断哪些单位是存量、不能算新开发</span><span class="dlbtn">⬇ 下载 xlsx</span>
+        <span class="ds">方案要求提交的核心表，12 家位（36 行），学历口径已改专科，别在原表上填</span><span class="dlbtn">⬇ 下载 xlsx</span>
       </a>
       <a class="dcard" href="materials.html" target="_blank">
         <span class="ft">打印</span><span class="nm">可打印材料包（记录表/邀约函/话术）</span>
         <span class="ds">Ctrl+P 存 PDF，无需 Excel 也能用</span><span class="dlbtn">🖨 打开</span>
-      </a>
-      <a class="dcard" href="downloads/student-info/yao-xue-3year.xlsx" download>
-        <span class="ft">生源</span><span class="nm">生源信息表 · 药学三年制</span>
-        <span class="ds">301 人</span><span class="dlbtn">⬇ 下载 xlsx</span>
-      </a>
-      <a class="dcard" href="downloads/student-info/yao-xue-2year.xlsx" download>
-        <span class="ft">生源</span><span class="nm">生源信息表 · 药学二（三二分段）</span>
-        <span class="ds">262 人（肇庆本地意愿最强）</span><span class="dlbtn">⬇ 下载 xlsx</span>
-      </a>
-      <a class="dcard" href="downloads/student-info/zhong-yao-xue.xlsx" download>
-        <span class="ft">生源</span><span class="nm">生源信息表 · 中药学</span>
-        <span class="ds">172 人</span><span class="dlbtn">⬇ 下载 xlsx</span>
-      </a>
-      <a class="dcard" href="downloads/student-info/yao-pin-jing-ying.xlsx" download>
-        <span class="ft">生源</span><span class="nm">生源信息表 · 药品经营与管理</span>
-        <span class="ds">75 人</span><span class="dlbtn">⬇ 下载 xlsx</span>
-      </a>
-      <a class="dcard" href="downloads/student-info/zhuan-sheng-ben.xlsx" download>
-        <span class="ft">生源</span><span class="nm">毕业班 · 药学专升本班</span>
-        <span class="ds">生源补充</span><span class="dlbtn">⬇ 下载 xlsx</span>
       </a>
     </div>
   </div>
@@ -564,18 +277,17 @@ footer a{color:#9fd0ff}
   <div class="wrap">
     <div>
       <b>药学院 · 访企拓岗促就业专项活动</b><br>
-      统筹：关子岳（辅导员）｜报送：就业指导中心 罗伟宏（sxb@zqmc.edu.cn）<br>
+      报送：就业指导中心（sxb@zqmc.edu.cn）<br>
       内部使用 · 含联系方式请勿外传
     </div>
     <div style="text-align:right">
-      数据来源：实施方案(2026-10-26)·微信通知·罗伟宏录音·企查查·腾讯地图·上一次招聘会岗位表<br>
+      数据来源：实施方案(2026-10-26)·微信通知·就业指导中心录音<br>
       本页更新：2026-11-02 ｜ 巡点地图版权归原行程规划页
     </div>
   </div>
 </footer>
 
 <script>
-// 移动端菜单：点击链接后自动收起
 document.querySelectorAll('#nl a').forEach(function(a){
   a.addEventListener('click',function(){document.getElementById('nl').classList.remove('open');});
 });
