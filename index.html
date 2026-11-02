@@ -87,6 +87,11 @@ section{padding:46px 0;border-bottom:1px solid var(--line)}
 .script .who{font-weight:700;color:var(--navy);font-size:12.5px;display:block;margin-bottom:4px}
 .script .who.c{color:var(--accent-deep)}
 
+/* 佐证提示 */
+.callout{border-radius:12px;padding:16px 18px;font-size:14.5px;margin:18px 0;border:1px solid}
+.callout.warn{background:var(--amber-soft);border-color:#f3d3ad;color:#7a4a12;line-height:2}
+.callout.warn b{color:#a8550e}
+
 /* 下载中心 */
 .dl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .dl a.dcard{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-radius:12px;
@@ -247,16 +252,17 @@ footer a{color:#9fd0ff}
 <section id="download">
   <div class="wrap">
     <h2 class="section-title"><span class="bar"></span>材料下载</h2>
-    <p class="sub">本页仅提供方案要求提交的必备材料，点一下即可下载 / 打开。含内部通讯信息的文件仅限校内团队使用，对外发布前删联系方式。</p>
+    <p class="sub">方案要求提交的必备材料，点一下即可下载。含内部通讯信息的文件仅限校内团队使用，对外发布前删联系方式。</p>
     <div class="dl">
       <a class="dcard" href="downloads/fujian1-form.xlsx" download>
         <span class="ft">核心 · 要填</span><span class="nm">附件1 访企拓岗信息表（扩行版）</span>
         <span class="ds">方案要求提交的核心表，12 家位（36 行），学历口径已改专科，别在原表上填</span><span class="dlbtn">⬇ 下载 xlsx</span>
       </a>
-      <a class="dcard" href="materials.html" target="_blank">
-        <span class="ft">打印</span><span class="nm">可打印材料包（记录表/邀约函/话术）</span>
-        <span class="ds">Ctrl+P 存 PDF，无需 Excel 也能用</span><span class="dlbtn">🖨 打开</span>
-      </a>
+    </div>
+    <div class="callout warn">
+      <b>📸 走访两项佐证，缺一不可（缺一项不予认定）：</b><br>
+      ① <b>拍照</b>：每家至少 2–3 张——单位门头/标识 1 张 + 座谈场景 1–2 张，照片命名与附件1「走访单位名称」严格一致；<br>
+      ② <b>全程录音</b>：从实习生见面会、科教科座谈到实地查看收尾，全过程录音存档备查。
     </div>
   </div>
 </section>
